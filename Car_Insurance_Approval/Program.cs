@@ -22,7 +22,7 @@ namespace Car_Insurance_Approval
             hasDUI = BoolInputParse("Have you ever had a DUI");
             speedingTickets = IntInputParse("How many speeding tickets do you have?");
 
-            if ((age >= 15) && (hasDUI == false) && (speedingTickets <= 3))
+            if ((age > 15) && (hasDUI == false) && (speedingTickets <= 3))
             {
                 isQualified = true;
             }
