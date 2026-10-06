@@ -15,6 +15,7 @@ namespace Package_Shipping_Quote
             int packageWidth;
             int packageHeight;
             int packageLength;
+            int packageSize;
             int packageQuote;
 
             Console.WriteLine("Welcome to Package Express. Please follow the instructions below.");
@@ -24,7 +25,7 @@ namespace Package_Shipping_Quote
 
             if (packageWeight > 50)
             {
-                Console.WriteLine("Package too big to be shipped via Package Express");
+                Console.WriteLine("Package too heavy to be shipped via Package Express");
             }
 
             else
@@ -38,13 +39,20 @@ namespace Package_Shipping_Quote
                 Console.WriteLine("Please enter the length of your package:");
                 packageLength = VerifyPackageDimensions(Console.ReadLine());
 
-                packageQuote = (packageHeight * packageWidth * packageLength * packageWeight) / 100;
+                packageSize = packageHeight * packageWidth * packageLength;
 
-                Console.WriteLine("Your estimated total for shipping this package is: $" + packageQuote + ".00");
+                if (packageSize > 50)
+                {
+                    Console.WriteLine("Package too big to be shipped via Package Express.");
+                }
+
+                else
+                {
+                    packageQuote = (packageSize * packageWeight) / 100;
+
+                    Console.WriteLine("Your estimated total for shipping this package is: $" + packageQuote + ".00");
+                }
             }
-
-
-
         }
 
         static int VerifyPackageWeight(string weight)
