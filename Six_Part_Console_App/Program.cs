@@ -10,7 +10,7 @@ namespace Six_Part_Console_App
         {
             string[] stringArray = new string[5];
 
-            // Using the < symbol for the loop. Step 195 part 1
+            // Using the < symbol for the loop
             for (int i = 0; i < stringArray.Length; i++)
             {
                 Console.WriteLine($"Enter a sentence explaining one of your favorite things #{i + 1}: ");
@@ -19,14 +19,14 @@ namespace Six_Part_Console_App
 
             Console.WriteLine("Here are your favorite things: ");
 
-            // Was a foreach loop but changed it to a for loop for step 195 part 3.
+            // Was a foreach loop but changed it to a for loop
             for (int i = 1; i <= stringArray.Length; i++)
             {
                 Console.WriteLine(stringArray[i - 1]);
             }
 
             // At first it was stringArray[0] == stringArray[0] which was always true and now it checks to see if the first 2 strings are the same
-            // and makes you change the second one if they are the same. Step 194
+            // and makes you change the second one if they are the same
             while (stringArray[0] == stringArray[1])
             {
                 Console.WriteLine("You cannot list your one of your favorite things twice!");
@@ -42,6 +42,7 @@ namespace Six_Part_Console_App
 
             Console.WriteLine("Try to guess the top 5 songs from the year 2007:");
 
+            // The loop keeps going until a correct song is chosen
             while (guessIsCorrect == false)
             {
                 userGuess = Console.ReadLine();
@@ -72,7 +73,7 @@ namespace Six_Part_Console_App
 
             Console.WriteLine("Pick one of these animals and I will tell you at which index it is located: dog, cat, moose, rabbit, and goat");
 
-
+            // Basically the same as the last one except there are repeat items in the list
             while (!animalExists)
             {
                 selectedAnimal = Console.ReadLine();
@@ -99,6 +100,7 @@ namespace Six_Part_Console_App
             }
 
             List<string> videoGameList = new List<string> { "Minecraft", "Call of Duty", "Wardogs", "Minecraft", "Counter Strike", "Valorant", "Call of Duty" };
+            // Since foreach loops are structured differently, this index is here to  track how many times the foreach loop has ran
             int gameIndex = 0;
 
             foreach (string game in videoGameList)
