@@ -92,7 +92,7 @@ namespace Method_Console_App
             {
                 if (!int.TryParse(age, out parsedInt))
                 {
-                    Console.WriteLine("Your input was invalid, try again");
+                    Console.WriteLine("Your input was invalid. Make sure to enter a whole non-negative number");
                     Console.WriteLine("Enter your age and I will tell you some fun facts about yourself");
 
                     age = Console.ReadLine();
