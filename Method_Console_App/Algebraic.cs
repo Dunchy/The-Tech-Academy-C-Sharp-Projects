@@ -8,37 +8,37 @@ namespace Method_Console_App
 {
     internal class Algebraic
     {
-        public static void DogYears(string userAge)
+        public static int DogYears(int age)
         {
-            int age = IntInputParse(userAge);
+            int dogyearMultiplier = 7;
             // It used to be that people would say that 1 human year was 7 dog years. That might not be the case anymore.
-            Console.WriteLine("You are " + (age * 7) + " in dog years");
+            return age * dogyearMultiplier;
         }
 
-        public static void Y2K(string userAge)
+        public static int Y2K(int age)
         {
             int yearsSinceY2K = 26;
-            int ageY2K = IntInputParse(userAge) - yearsSinceY2K;
+            int ageY2K = age - yearsSinceY2K;
 
-            if (ageY2K <= 0)
-            {
-                Console.WriteLine("You were either a baby or not born yet when Y2K happened");
-            }
-            else
-            {
-                Console.WriteLine("You were " + ageY2K + " years old when YSK happened");
-            }
+            return ageY2K;
         }
 
         // I actually couldn't think of a third thing so I am making this up on this spot
-        public static void FindGeneration(string userAge)
+        public static int FindGeneration(int age)
         {
-            int age = IntInputParse(userAge);
+            int babyKey = 0;
+            int alphaKey = 1;
+            int zoomerKey = 2;
+            int millennialKey = 3;
+            int genxKey = 4;
+            int boomerKey = 5;
+            int silentKey = 6;
+            int elderlyKey = 7;
 
             int alphaMin = 2;
             int alphaMax = 13;
             int zoomerMin = 14;
-            int zommerMax = 29;
+            int zoomerMax = 29;
             int millennialMin = 30;
             int millennialMax = 45;
             int genxMin = 46;
@@ -50,41 +50,39 @@ namespace Method_Console_App
 
             if (age >= alphaMin && age <= alphaMax)
             {
-                Console.WriteLine("You are a part of Gen Alpha");
+                return alphaKey;
             }
-
-            else if (age >= zoomerMin && age <= zommerMax)
+            else if (age >= zoomerMin && age <= zoomerMax)
             {
-                Console.WriteLine("You are a Zoomer");
+                return zoomerKey;
             }
             else if (age >= millennialMin && age <= millennialMax)
             {
-                Console.WriteLine("You are a Millennial");
+                return millennialKey;
             }
             else if (age >= genxMin && age <= genxMax)
             {
-                Console.WriteLine("You are a part of Gen X");
+                return genxKey;
             }
             else if (age >= boomerMin && age <= boomerMax)
             {
-                Console.WriteLine("You are a Baby Boomer");
+                return boomerKey;
             }
             else if (age >= silentMin && age <= silentMax)
             {
-                Console.WriteLine("You are a part of the Silent Generation");
+                return silentKey;
             }
             else if (age > silentMax)
             {
-                Console.WriteLine("You are sadly probably not around anymore");
+                return elderlyKey;
             }
             else
             {
-                Console.WriteLine("You are probably too young to even read this so how did you even get this program to run?");
+                return babyKey;
             }
-
         }
 
-        static int IntInputParse(string age)
+        public static int IntInputParse(string age)
         {
             int parsedInt;
 
