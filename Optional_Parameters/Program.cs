@@ -10,6 +10,8 @@ namespace Optional_Parameters
     {
         static void Main(string[] args)
         {
+            Optionality options = new Optionality{};
+
             string num1;
             string num2;
 
@@ -38,7 +40,7 @@ namespace Optional_Parameters
                     Console.WriteLine("One of the numbers you entered was not formatted right. Try to use whole numbers next time");
                 }
 
-                Console.WriteLine("Result: " + Optionality.Mathing(firstNumber, secondNumber));
+                Console.WriteLine("Result: " + options.Mathing(firstNumber, secondNumber));
             }
             else
             {
@@ -52,7 +54,7 @@ namespace Optional_Parameters
                     Console.WriteLine("The number you entered was not formatted right. Try to use whole numbers next time");
                 }
 
-                Console.WriteLine("Result: " + Optionality.Mathing(firstNumber));
+                Console.WriteLine("Result: " + options.Mathing(firstNumber));
             }
         }
     }

@@ -8,7 +8,7 @@ namespace Optional_Parameters
 {
     internal class Optionality
     {
-        public static int Mathing(int num1, int num2 = 0)
+        public int Mathing(int num1, int num2 = 0)
         {
             return num1 + num2;
         }
