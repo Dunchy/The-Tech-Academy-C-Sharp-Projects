@@ -21,6 +21,9 @@ namespace Void_Method
             int.TryParse(Console.ReadLine(), out num2);
 
             mathing.MathMethod(num1, num2);
+            Console.WriteLine("Press enter for another output:");
+            Console.ReadLine();
+            mathing.MathMethod(num1: 6, num2: 10);
 
         }
     }
