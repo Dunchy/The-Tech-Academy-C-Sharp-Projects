@@ -11,8 +11,12 @@ namespace Abstract_Person_Program
         static void Main(string[] args)
         {
             Employee example = new Employee() { FirstName = "Sample", LastName = "Student" };
+            IQuittable Dan = new Employee() { FirstName = "Dan", LastName = "Theman"};
 
             example.SayName();
+            example.Quit();
+
+            Dan.Quit();
         }
     }
 }
