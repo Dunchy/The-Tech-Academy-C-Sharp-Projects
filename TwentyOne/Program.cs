@@ -11,12 +11,13 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
-            // making an instance of the TwentyOneGame class the inherits from the Game class
-            TwentyOneGame game = new TwentyOneGame();
-            game.Players = new List<string>() { "Jesse", "Bill", "Bob" };
-            game.ListPlayers();
-            Console.ReadLine();
-            // making an instance of a deck from the class Deck
+            Game game = new TwentyOneGame();
+            game.Players = new List<Player>();
+            Player player = new Player();
+            player.Name = "Jesse";
+            game += player;
+            game -= player;
+
             Deck deck = new Deck();
             deck.Shuffle(3);
 
