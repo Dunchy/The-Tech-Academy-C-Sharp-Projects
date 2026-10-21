@@ -17,14 +17,18 @@ namespace Equals_Operator_Overload
             test1.LastName = "Chan";
             test1.ID = 426;
 
-            test1.FirstName = "Jet";
-            test1.LastName = "Li";
-            test1.ID = 224;
+            test2.FirstName = "Jet";
+            test2.LastName = "Li";
+            test2.ID = 224;
 
             Console.WriteLine(test1 == test2);
             Console.WriteLine(test1 == test1);
             Console.WriteLine(test1 != test2);
             Console.WriteLine(test1 != test1);
+
+            Console.WriteLine(Equals(test1, test2));
+
+            Console.WriteLine(test1.GetHashCode());
         }
     }
 }
