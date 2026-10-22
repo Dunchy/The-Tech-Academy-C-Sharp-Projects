@@ -24,6 +24,7 @@ namespace TwentyOne
                 }
             }
         }
+
         public List<Card> Cards { get; set; }
 
         public void Shuffle(int times = 3)
